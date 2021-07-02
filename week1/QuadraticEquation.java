@@ -15,8 +15,16 @@ public class QuadraticEquation {
     }
 
     public static void main(String[] args) {
-        QuadraticEquation qua = new QuadraticEquation(4, 4, 1);
-        qua.solveEquation();
+        QuadraticEquation qua1 = new QuadraticEquation(4, 4, 1);
+        qua1.solveEquation();
+
+        System.out.println();
+        QuadraticEquation qua2 = new QuadraticEquation(1, 4, 1);
+        qua2.solveEquation();
+
+        System.out.println();
+        QuadraticEquation qua3 = new QuadraticEquation(4, 4, 5);
+        qua3.solveEquation();
     }
 
     void solveEquation(){
