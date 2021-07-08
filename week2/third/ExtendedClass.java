@@ -6,6 +6,23 @@ public class ExtendedClass {
     private double d;
     private String s;
 
+    public ExtendedClass(byte b, int i, double d, String s) {
+        this.b = b;
+        this.i = i;
+        this.d = d;
+        this.s = s;
+    }
+
+    public static void main(String[] args) {
+        ExtendedClass extendedClass = new ExtendedClass((byte)13, 455, -12.6, "anxns c");
+        ExtendedClass clone = new ExtendedClass((byte)13, 455, -12.6, "anxns c");
+        ExtendedClass anotherClass = new ExtendedClass((byte)34, 15, 9.43, "hello");
+
+        System.out.println(extendedClass.equals(clone));
+        System.out.println(anotherClass.equals(extendedClass));
+        System.out.println(extendedClass.hashCode());
+        System.out.println(extendedClass);
+    }
 
     @Override
     public boolean equals(Object anObject) {
