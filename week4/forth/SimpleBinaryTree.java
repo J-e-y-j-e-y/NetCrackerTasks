@@ -31,6 +31,8 @@ public class SimpleBinaryTree {
         System.out.println("----------------POST------------------");
         tree.postorder(root);
         System.out.println("-------------------------------------");
+        System.out.println();
+        System.out.println("Высота дерева = " + tree.getHeight(root));
     }
 
     public void setRoot(Node<Integer> root) {
@@ -82,6 +84,12 @@ public class SimpleBinaryTree {
         }else {
             pred.setRightChild(node);
         }
+    }
+
+    public int getHeight(Node node){
+        if(node == null)
+            return 0;
+        return Math.max(getHeight(node.leftChild), getHeight(node.rightChild)) + 1;
     }
 
     public void preorder(Node node){
